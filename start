@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+if [ -z "$(docker network ls --filter name=^ffc-sfi$ --format={{.Name}})" ]; then
+  echo "Creating ffc-sfi Docker network"
+  docker network create ffc-sfi
+fi
+set -e
+projectRoot="$(a="/$0"; a=${a%/*}; a=${a:-.}; a=${a#/}/; cd "$a/.." || return; pwd)"
+cd "${projectRoot}"
+./ffc-sfi-apply-web/scripts/start -d && \
+  ./ffc-sfi-apply-api/scripts/start -d && \
+  ./ffc-sfi-siti-agri-mock/scripts/start -d && \
+  ./ffc-sfi-agreement-calculator/scripts/start -d && \
+  ./ffc-sfi-processing-web/scripts/start -d && \
+  ./ffc-sfi-payment-batch-processor/scripts/start -d && \
+  ./ffc-sfi-payments/scripts/start -d && \
+  ./ffc-sfi-payment-web/scripts/start -d && \
+  ./ffc-sfi-agreement-viewer/scripts/start -d

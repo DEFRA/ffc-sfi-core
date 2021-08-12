@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+set -e
+projectRoot="$(a="/$0"; a=${a%/*}; a=${a:-.}; a=${a#/}/; cd "$a/.." || return; pwd)"
+cd "${projectRoot}"
+cd ./ffc-sfi-apply-web && \
+  docker-compose down
+cd "${projectRoot}"
+cd ./ffc-sfi-apply-api && \
+  docker-compose down
+cd "${projectRoot}"
+cd ./ffc-sfi-siti-agri-mock && \
+  docker-compose down
+cd "${projectRoot}"
+cd ./ffc-sfi-agreement-calculator && \
+  docker-compose down
+cd "${projectRoot}"
+cd ./ffc-sfi-processing-web && \
+  docker-compose down
+cd "${projectRoot}"
+cd ./ffc-sfi-payment-batch-processor && \
+  docker-compose down
+cd "${projectRoot}"
+cd ./ffc-sfi-payments && \
+  docker-compose down
+cd "${projectRoot}"
+cd ./ffc-sfi-payment-web && \
+  docker-compose down
+cd "${projectRoot}"
+cd ./ffc-sfi-agreement-viewer && \
+  docker-compose down
