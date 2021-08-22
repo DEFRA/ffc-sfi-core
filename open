@@ -8,6 +8,8 @@ code ./ffc-sfi-apply-web && \
   code ./ffc-sfi-agreement-calculator && \
   code ./ffc-sfi-processing-web && \
   code ./ffc-sfi-payment-batch-processor && \
+  code ./ffc-sfi-payment-enrichment && \
   code ./ffc-sfi-payments && \
+  code ./ffc-sfi-payment-submission && \
   code ./ffc-sfi-payment-web && \
   code ./ffc-sfi-agreement-viewer

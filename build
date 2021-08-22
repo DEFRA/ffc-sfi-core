@@ -20,7 +20,13 @@ cd "${projectRoot}"
 cd ./ffc-sfi-payment-batch-processor && \
   docker-compose build
 cd "${projectRoot}"
+cd ./ffc-sfi-payment-enrichment && \
+  docker-compose build
+cd "${projectRoot}"
 cd ./ffc-sfi-payments && \
+  docker-compose build
+cd "${projectRoot}"
+cd ./ffc-sfi-payment-submission && \
   docker-compose build
 cd "${projectRoot}"
 cd ./ffc-sfi-payment-web && \

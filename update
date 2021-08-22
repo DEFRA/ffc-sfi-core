@@ -26,7 +26,15 @@ cd ./ffc-sfi-payment-batch-processor && \
   git checkout main && \
   git pull
 cd "${projectRoot}"
+cd ./ffc-sfi-payment-enrichment && \
+  git checkout main && \
+  git pull
+cd "${projectRoot}"
 cd ./ffc-sfi-payments && \
+  git checkout main && \
+  git pull
+cd "${projectRoot}"
+cd ./ffc-sfi-payment-submission && \
   git checkout main && \
   git pull
 cd "${projectRoot}"

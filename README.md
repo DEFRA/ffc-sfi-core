@@ -47,11 +47,23 @@ Validate and process payment batch files from Siti Agri.
 
 - https://github.com/DEFRA/ffc-sfi-payment-batch-processor
 
-### Payments
+### Payment enrichment
 
-Validation, mapping and processing of payment requests supporting integration with Dynamics 365.
+Validation and mapping of payment requests.
+
+- https://github.com/DEFRA/ffc-sfi-payment-enrichment
+
+### Payment processing
+
+Processing of payment requests including post payment adjustment and ledger splitting.
 
 - https://github.com/DEFRA/ffc-sfi-payments
+
+### Payment submission
+
+Publish payment requests to Dynamics 365.
+
+- https://github.com/DEFRA/ffc-sfi-payment-submission
 
 ### Payment web
 
