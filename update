@@ -6,11 +6,11 @@ cd ./ffc-sfi-apply-web && \
   git checkout main && \
   git pull
 cd "${projectRoot}"
-cd ./ffc-sfi-apply-api && \
+cd ./ffc-sfi-agreement-api && \
   git checkout main && \
   git pull
 cd "${projectRoot}"
-cd ./ffc-sfi-siti-agri-mock && \
+cd ./ffc-sfi-apply-api && \
   git checkout main && \
   git pull
 cd "${projectRoot}"

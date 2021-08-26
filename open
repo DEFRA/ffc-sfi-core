@@ -3,8 +3,8 @@ set -e
 projectRoot="$(a="/$0"; a=${a%/*}; a=${a:-.}; a=${a#/}/; cd "$a/.." || return; pwd)"
 cd "${projectRoot}"
 code ./ffc-sfi-apply-web && \
+  code ./ffc-sfi-agreement-api && \
   code ./ffc-sfi-apply-api && \
-  code ./ffc-sfi-siti-agri-mock && \
   code ./ffc-sfi-agreement-calculator && \
   code ./ffc-sfi-processing-web && \
   code ./ffc-sfi-payment-batch-processor && \
