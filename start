@@ -15,5 +15,6 @@ cd "${projectRoot}"
   ./ffc-sfi-payment-enrichment/scripts/start -d && \
   ./ffc-sfi-payments/scripts/start -d && \
   ./ffc-sfi-payment-submission/scripts/start -d && \
+  ./ffc-sfi-payment-responses/scripts/start -d && \
   ./ffc-sfi-payment-web/scripts/start -d && \
   ./ffc-sfi-agreement-viewer/scripts/start -d

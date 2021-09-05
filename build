@@ -29,6 +29,9 @@ cd "${projectRoot}"
 cd ./ffc-sfi-payment-submission && \
   docker-compose build
 cd "${projectRoot}"
+cd ./ffc-sfi-payment-responses && \
+  docker-compose build
+cd "${projectRoot}"
 cd ./ffc-sfi-payment-web && \
   docker-compose build
 cd "${projectRoot}"

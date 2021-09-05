@@ -11,5 +11,6 @@ code ./ffc-sfi-apply-web && \
   code ./ffc-sfi-payment-enrichment && \
   code ./ffc-sfi-payments && \
   code ./ffc-sfi-payment-submission && \
+  code ./ffc-sfi-payment-responses && \
   code ./ffc-sfi-payment-web && \
   code ./ffc-sfi-agreement-viewer

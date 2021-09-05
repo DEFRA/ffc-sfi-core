@@ -65,6 +65,12 @@ Publish payment requests to Dynamics 365.
 
 - https://github.com/DEFRA/ffc-sfi-payment-submission
 
+### Payment responses
+
+Process payment responses from Dynamics 365.
+
+- https://github.com/DEFRA/ffc-sfi-payment-responses
+
 ### Payment web
 
 Internal user admin web application to manage payment holds and processing.
