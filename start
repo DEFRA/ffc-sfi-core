@@ -8,7 +8,6 @@ projectRoot="$(a="/$0"; a=${a%/*}; a=${a:-.}; a=${a#/}/; cd "$a/.." || return; p
 cd "${projectRoot}"
 ./ffc-sfi-apply-web/scripts/start -d && \
   ./ffc-sfi-agreement-api/scripts/start -d && \
-  ./ffc-sfi-apply-api/scripts/start -d && \
   ./ffc-sfi-agreement-calculator/scripts/start -d && \
   ./ffc-sfi-processing-web/scripts/start -d && \
   ./ffc-sfi-payment-batch-processor/scripts/start -d && \

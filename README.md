@@ -22,12 +22,6 @@ Front end service for external users to apply for SFI and submit an agreement.
 Agreement management service
 
 - https://github.com/DEFRA/ffc-sfi-agreement-api
-- 
-### Apply API
-
-Abstraction layer to support integration with Siti Agri.
-
-- https://github.com/DEFRA/ffc-sfi-apply-api
 
 ### Agreement calculator
 

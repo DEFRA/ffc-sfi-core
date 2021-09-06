@@ -8,9 +8,6 @@ cd "${projectRoot}"
 cd ./ffc-sfi-agreement-api && \
   docker-compose down
 cd "${projectRoot}"
-cd ./ffc-sfi-apply-api && \
-  docker-compose down
-cd "${projectRoot}"
 cd ./ffc-sfi-agreement-calculator && \
   docker-compose down
 cd "${projectRoot}"
