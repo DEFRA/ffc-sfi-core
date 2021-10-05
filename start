@@ -5,15 +5,47 @@ if [ -z "$(docker network ls --filter name=^ffc-sfi$ --format={{.Name}})" ]; the
 fi
 set -e
 projectRoot="$(a="/$0"; a=${a%/*}; a=${a:-.}; a=${a#/}/; cd "$a/.." || return; pwd)"
+
+show_help() {
+  echo "
+    Usage: scripts/test [OPTION...]
+    Build and run SFI services.
+
+    Options:
+      -p, --payments   include payment services
+      -h, --help       display this help text
+    "
+}
+
+while :; do
+  case $1 in
+    -p|--payments)
+      payments="true"
+      ;;
+
+    -h|--help)   # Call a "show_help" function to display a synopsis, then exit.
+      show_help
+      exit
+      ;;
+    *)
+      break
+  esac
+
+  shift
+done
+
 cd "${projectRoot}"
 ./ffc-sfi-apply-web/scripts/start -d && \
   ./ffc-sfi-agreement-api/scripts/start -d && \
   ./ffc-sfi-agreement-calculator/scripts/start -d && \
   ./ffc-sfi-processing-web/scripts/start -d && \
-  ./ffc-sfi-payment-batch-processor/scripts/start -d && \
-  ./ffc-sfi-payment-enrichment/scripts/start -d && \
-  ./ffc-sfi-payments/scripts/start -d && \
-  ./ffc-sfi-payment-submission/scripts/start -d && \
-  ./ffc-sfi-payment-responses/scripts/start -d && \
-  ./ffc-sfi-payment-web/scripts/start -d && \
   ./ffc-sfi-agreement-viewer/scripts/start -d
+
+if [ "${payments}" = "true" ]; then
+  ./ffc-sfi-payment-batch-processor/scripts/start -d && \
+    ./ffc-sfi-payment-enrichment/scripts/start -d && \
+    ./ffc-sfi-payments/scripts/start -d && \
+    ./ffc-sfi-payment-submission/scripts/start -d && \
+    ./ffc-sfi-payment-responses/scripts/start -d && \
+    ./ffc-sfi-payment-web/scripts/start -d
+fi
