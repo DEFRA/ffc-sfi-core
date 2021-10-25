@@ -46,10 +46,6 @@ cd "${projectRoot}"
 cd ./ffc-sfi-processing-web && \
   git checkout main && \
   git pull
-cd "${projectRoot}"
-cd ./ffc-sfi-agreement-viewer && \
-  git checkout main && \
-  git pull
 
 if [ "${payments}" = "true" ]; then
   cd "${projectRoot}"

@@ -42,9 +42,6 @@ cd ./ffc-sfi-agreement-calculator && \
 cd "${projectRoot}"
 cd ./ffc-sfi-processing-web && \
   docker-compose down
-cd "${projectRoot}"
-cd ./ffc-sfi-agreement-viewer && \
-  docker-compose down
 
 if [ "${payments}" = "true" ]; then
   cd "${projectRoot}"

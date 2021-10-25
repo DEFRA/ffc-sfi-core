@@ -34,8 +34,7 @@ cd "${projectRoot}"
 code ./ffc-sfi-apply-web && \
   code ./ffc-sfi-agreement-api && \
   code ./ffc-sfi-agreement-calculator && \
-  code ./ffc-sfi-processing-web && \
-  code ./ffc-sfi-agreement-viewer
+  code ./ffc-sfi-processing-web
 
 if [ "${payments}" = "true" ]; then
   code ./ffc-sfi-payment-batch-processor && \
