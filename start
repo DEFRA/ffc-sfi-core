@@ -40,6 +40,11 @@ while :; do
 done
 
 cd "${projectRoot}"
+
+if [ "${gateway}" = "true" ]; then
+  ./ffc-sfi-api-gateway/scripts/start -d
+fi
+
 ./ffc-sfi-apply-web/scripts/start -d && \
   ./ffc-sfi-agreement-api/scripts/start -d && \
   ./ffc-sfi-agreement-calculator/scripts/start -d && \
@@ -52,8 +57,4 @@ if [ "${payments}" = "true" ]; then
     ./ffc-sfi-payment-submission/scripts/start -d && \
     ./ffc-sfi-payment-responses/scripts/start -d && \
     ./ffc-sfi-payment-web/scripts/start -d
-fi
-
-if [ "${gateway}" = "true" ]; then
-  ./ffc-sfi-api-gateway/scripts/start -d
 fi
