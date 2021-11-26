@@ -9,6 +9,7 @@ show_help() {
 
     Options:
       -p, --payments   include payment services
+      -g, --gateway    include API gateway
       -h, --help       display this help text
     "
 }
@@ -17,6 +18,10 @@ while :; do
   case $1 in
     -p|--payments)
       payments="true"
+      ;;
+
+    -g|--gateway)
+      gateway="true"
       ;;
 
     -h|--help)   # Call a "show_help" function to display a synopsis, then exit.
@@ -70,6 +75,13 @@ if [ "${payments}" = "true" ]; then
     git pull
   cd "${projectRoot}"
   cd ./ffc-sfi-payment-web && \
+    git checkout main && \
+    git pull
+fi
+
+if [ "${gateway}" = "true" ]; then
+  cd "${projectRoot}"
+  cd ./ffc-sfi-api-gateway && \
     git checkout main && \
     git pull
 fi

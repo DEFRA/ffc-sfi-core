@@ -1,0 +1,45 @@
+#!/usr/bin/env sh
+
+# Clone repositories managed by this project
+set -e
+projectRoot=$(a="/$0"; a=${a%/*}; a=${a:-.}; a=${a#/}/; cd "$a/.." || return; pwd)
+
+(
+  cd "${projectRoot}"
+
+  printf "\nCloning repositories\n"
+
+  test -d ffc-sfi-apply-web\
+    && >&2 echo "The 'ffc-sfi-apply-web' repository already exists. Skipping." \
+    || git clone https://github.com/DEFRA/ffc-sfi-apply-web.git  
+  test -d ffc-sfi-agreement-api\
+    && >&2 echo "The 'ffc-sfi-agreement-api' repository already exists. Skipping." \
+    || git clone https://github.com/DEFRA/ffc-sfi-agreement-api.git
+  test -d ffc-sfi-agreement-calculator\
+    && >&2 echo "The 'ffc-sfi-agreement-calculator' repository already exists. Skipping." \
+    || git clone https://github.com/DEFRA/ffc-sfi-agreement-calculator.git
+  test -d ffc-sfi-processing-web\
+    && >&2 echo "The 'ffc-sfi-processing-web' repository already exists. Skipping." \
+    || git clone https://github.com/DEFRA/ffc-sfi-processing-web.git
+  test -d ffc-sfi-payment-enrichment\
+    && >&2 echo "The 'ffc-sfi-payment-enrichment' repository already exists. Skipping." \
+    || git clone https://github.com/DEFRA/ffc-sfi-payment-enrichment.git
+  test -d ffc-sfi-payments\
+    && >&2 echo "The 'ffc-sfi-payments' repository already exists. Skipping." \
+    || git clone https://github.com/DEFRA/ffc-sfi-payments.git
+  test -d ffc-sfi-payment-submission\
+    && >&2 echo "The 'ffc-sfi-payment-submission' repository already exists. Skipping." \
+    || git clone https://github.com/DEFRA/ffc-sfi-payment-submission.git
+  test -d ffc-sfi-payment-responses\
+    && >&2 echo "The 'ffc-sfi-payment-responses' repository already exists. Skipping." \
+    || git clone https://github.com/DEFRA/ffc-sfi-payment-responses.git
+  test -d ffc-sfi-payment-batch-processor\
+    && >&2 echo "The 'ffc-sfi-payment-batch-processor' repository already exists. Skipping." \
+    || git clone https://github.com/DEFRA/ffc-sfi-payment-batch-processor.git
+  test -d ffc-sfi-payment-web\
+    && >&2 echo "The 'ffc-sfi-payment-web' repository already exists. Skipping." \
+    || git clone https://github.com/DEFRA/ffc-sfi-payment-web.git
+  test -d ffc-sfi-api-gateway\
+    && >&2 echo "The 'ffc-sfi-api-gateway' repository already exists. Skipping." \
+    || git clone https://github.com/DEFRA/ffc-sfi-api-gateway.git
+)
