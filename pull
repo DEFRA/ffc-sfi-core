@@ -1,0 +1,65 @@
+#!/usr/bin/env sh
+set -e
+projectRoot="$(a="/$0"; a=${a%/*}; a=${a:-.}; a=${a#/}/; cd "$a/.." || return; pwd)"
+
+show_help() {
+  echo "
+    Usage: scripts/test [OPTION...]
+    Build and run SFI services.
+
+    Options:
+      -p, --payments   include payment services
+      -h, --help       display this help text
+    "
+}
+
+while :; do
+  case $1 in
+    -p|--payments)
+      payments="true"
+      ;;
+
+    -h|--help)   # Call a "show_help" function to display a synopsis, then exit.
+      show_help
+      exit
+      ;;
+    *)
+      break
+  esac
+
+  shift
+done
+
+cd "${projectRoot}"
+cd ./ffc-sfi-apply-web && \
+  git pull
+cd "${projectRoot}"
+cd ./ffc-sfi-agreement-api && \
+  git pull
+cd "${projectRoot}"
+cd ./ffc-sfi-agreement-calculator && \
+  git pull
+cd "${projectRoot}"
+cd ./ffc-sfi-processing-web && \
+  git pull
+
+if [ "${payments}" = "true" ]; then
+  cd "${projectRoot}"
+  cd ./ffc-sfi-payment-batch-processor && \
+    git pull
+  cd "${projectRoot}"
+  cd ./ffc-sfi-payment-enrichment && \
+    git pull
+  cd "${projectRoot}"
+  cd ./ffc-sfi-payments && \
+    git pull
+  cd "${projectRoot}"
+  cd ./ffc-sfi-payment-submission && \
+    git pull
+  cd "${projectRoot}"
+  cd ./ffc-sfi-payment-responses && \
+    git pull
+  cd "${projectRoot}"
+  cd ./ffc-sfi-payment-web && \
+    git pull
+fi
