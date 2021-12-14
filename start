@@ -13,6 +13,7 @@ show_help() {
 
     Options:
       -p, --payments   include payment services
+      -g, --gateway    include API gateway
       -h, --help       display this help text
     "
 }
@@ -21,6 +22,10 @@ while :; do
   case $1 in
     -p|--payments)
       payments="true"
+      ;;
+
+    -g|--gateway)
+      gateway="true"
       ;;
 
     -h|--help)   # Call a "show_help" function to display a synopsis, then exit.
@@ -35,6 +40,11 @@ while :; do
 done
 
 cd "${projectRoot}"
+
+if [ "${gateway}" = "true" ]; then
+  ./ffc-sfi-api-gateway/scripts/start -d
+fi
+
 ./ffc-sfi-apply-web/scripts/start -d && \
   ./ffc-sfi-agreement-api/scripts/start -d && \
   ./ffc-sfi-agreement-calculator/scripts/start -d && \

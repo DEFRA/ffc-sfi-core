@@ -70,3 +70,9 @@ Process payment responses from Dynamics 365.
 Internal user admin web application to manage payment holds and processing.
 
 - https://github.com/DEFRA/ffc-sfi-payment-web
+
+### API Gateway
+
+Tactical API gateway.
+
+- https://github.com/DEFRA/ffc-sfi-api-gateway

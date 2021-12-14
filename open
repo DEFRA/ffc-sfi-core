@@ -9,6 +9,7 @@ show_help() {
 
     Options:
       -p, --payments   include payment services
+      -g, --gateway    include API gateway
       -h, --help       display this help text
     "
 }
@@ -17,6 +18,10 @@ while :; do
   case $1 in
     -p|--payments)
       payments="true"
+      ;;
+
+    -g|--gateway)
+      gateway="true"
       ;;
 
     -h|--help)   # Call a "show_help" function to display a synopsis, then exit.
@@ -43,4 +48,8 @@ if [ "${payments}" = "true" ]; then
     code ./ffc-sfi-payment-submission && \
     code ./ffc-sfi-payment-responses && \
     code ./ffc-sfi-payment-web
+fi
+
+if [ "${gateway}" = "true" ]; then
+  code ./ffc-sfi-api-gateway
 fi
