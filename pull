@@ -37,19 +37,15 @@ done
 
 cd "${projectRoot}"
 cd ./ffc-sfi-apply-web && \
-  git checkout main && \
   git pull
 cd "${projectRoot}"
 cd ./ffc-sfi-agreement-api && \
-  git checkout main && \
   git pull
 cd "${projectRoot}"
 cd ./ffc-sfi-agreement-calculator && \
-  git checkout main && \
   git pull
 cd "${projectRoot}"
 cd ./ffc-sfi-processing-web && \
-  git checkout main && \
   git pull
 
 if [ "${payments}" = "true" ]; then
