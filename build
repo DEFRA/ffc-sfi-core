@@ -50,22 +50,22 @@ cd ./ffc-sfi-processing-web && \
 
 if [ "${payments}" = "true" ]; then
   cd "${projectRoot}"
-  cd ./ffc-sfi-payment-batch-processor && \
+  cd ./ffc-pay-batch-processor && \
     docker-compose build
   cd "${projectRoot}"
-  cd ./ffc-sfi-payment-enrichment && \
+  cd ./ffc-pay-enrichment && \
     docker-compose build
   cd "${projectRoot}"
-  cd ./ffc-sfi-payments && \
+  cd ./ffc-pay-processing && \
     docker-compose build
   cd "${projectRoot}"
-  cd ./ffc-sfi-payment-submission && \
+  cd ./ffc-pay-submission && \
     docker-compose build
   cd "${projectRoot}"
-  cd ./ffc-sfi-payment-responses && \
+  cd ./ffc-pay-responses && \
     docker-compose build
   cd "${projectRoot}"
-  cd ./ffc-sfi-payment-web && \
+  cd ./ffc-pay-web && \
     docker-compose build
 fi
 

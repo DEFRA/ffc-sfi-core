@@ -51,10 +51,10 @@ fi
   ./ffc-sfi-processing-web/scripts/start -d
 
 if [ "${payments}" = "true" ]; then
-  ./ffc-sfi-payment-batch-processor/scripts/start -d && \
-    ./ffc-sfi-payment-enrichment/scripts/start -d && \
-    ./ffc-sfi-payments/scripts/start -d && \
-    ./ffc-sfi-payment-submission/scripts/start -d && \
-    ./ffc-sfi-payment-responses/scripts/start -d && \
-    ./ffc-sfi-payment-web/scripts/start -d
+  ./ffc-pay-batch-processor/scripts/start -d && \
+    ./ffc-pay-enrichment/scripts/start -d && \
+    ./ffc-pay-processing/scripts/start -d && \
+    ./ffc-pay-submission/scripts/start -d && \
+    ./ffc-pay-responses/scripts/start -d && \
+    ./ffc-pay-web/scripts/start -d
 fi

@@ -42,12 +42,12 @@ code ./ffc-sfi-apply-web && \
   code ./ffc-sfi-processing-web
 
 if [ "${payments}" = "true" ]; then
-  code ./ffc-sfi-payment-batch-processor && \
-    code ./ffc-sfi-payment-enrichment && \
-    code ./ffc-sfi-payments && \
-    code ./ffc-sfi-payment-submission && \
-    code ./ffc-sfi-payment-responses && \
-    code ./ffc-sfi-payment-web
+  code ./ffc-pay-batch-processor && \
+    code ./ffc-pay-enrichment && \
+    code ./ffc-pay-processing && \
+    code ./ffc-pay-submission && \
+    code ./ffc-pay-responses && \
+    code ./ffc-pay-web
 fi
 
 if [ "${gateway}" = "true" ]; then

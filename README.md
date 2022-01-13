@@ -39,37 +39,37 @@ Post submission validation and internal user case working service.
 
 Validate and process payment batch files from Siti Agri.
 
-- https://github.com/DEFRA/ffc-sfi-payment-batch-processor
+- https://github.com/DEFRA/ffc-pay-batch-processor
 
 ### Payment enrichment
 
 Validation and mapping of payment requests.
 
-- https://github.com/DEFRA/ffc-sfi-payment-enrichment
+- https://github.com/DEFRA/ffc-pay-enrichment
 
 ### Payment processing
 
 Processing of payment requests including post payment adjustment and ledger splitting.
 
-- https://github.com/DEFRA/ffc-sfi-payments
+- https://github.com/DEFRA/ffc-pay-processing
 
 ### Payment submission
 
 Publish payment requests to Dynamics 365.
 
-- https://github.com/DEFRA/ffc-sfi-payment-submission
+- https://github.com/DEFRA/ffc-pay-submission
 
 ### Payment responses
 
 Process payment responses from Dynamics 365.
 
-- https://github.com/DEFRA/ffc-sfi-payment-responses
+- https://github.com/DEFRA/ffc-pay-responses
 
 ### Payment web
 
 Internal user admin web application to manage payment holds and processing.
 
-- https://github.com/DEFRA/ffc-sfi-payment-web
+- https://github.com/DEFRA/ffc-pay-web
 
 ### API Gateway
 

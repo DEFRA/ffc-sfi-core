@@ -54,27 +54,27 @@ cd ./ffc-sfi-processing-web && \
 
 if [ "${payments}" = "true" ]; then
   cd "${projectRoot}"
-  cd ./ffc-sfi-payment-batch-processor && \
+  cd ./ffc-pay-batch-processor && \
     git checkout main && \
     git pull
   cd "${projectRoot}"
-  cd ./ffc-sfi-payment-enrichment && \
+  cd ./ffc-pay-enrichment && \
     git checkout main && \
     git pull
   cd "${projectRoot}"
-  cd ./ffc-sfi-payments && \
+  cd ./ffc-pay-processing && \
     git checkout main && \
     git pull
   cd "${projectRoot}"
-  cd ./ffc-sfi-payment-submission && \
+  cd ./ffc-pay-submission && \
     git checkout main && \
     git pull
   cd "${projectRoot}"
-  cd ./ffc-sfi-payment-responses && \
+  cd ./ffc-pay-responses && \
     git checkout main && \
     git pull
   cd "${projectRoot}"
-  cd ./ffc-sfi-payment-web && \
+  cd ./ffc-pay-web && \
     git checkout main && \
     git pull
 fi
