@@ -37,40 +37,40 @@ done
 
 cd "${projectRoot}"
 cd ./ffc-sfi-apply-web && \
-  docker-compose down
+  docker-compose down $@
 cd "${projectRoot}"
 cd ./ffc-sfi-agreement-api && \
-  docker-compose down
+  docker-compose down $@
 cd "${projectRoot}"
 cd ./ffc-sfi-agreement-calculator && \
-  docker-compose down
+  docker-compose down $@
 cd "${projectRoot}"
 cd ./ffc-sfi-processing-web && \
-  docker-compose down
+  docker-compose down $@
 
 if [ "${payments}" = "true" ]; then
   cd "${projectRoot}"
   cd ./ffc-pay-batch-processor && \
-    docker-compose down
+    docker-compose down $@
   cd "${projectRoot}"
   cd ./ffc-pay-enrichment && \
-    docker-compose down
+    docker-compose down $@
   cd "${projectRoot}"
   cd ./ffc-pay-processing && \
-    docker-compose down
+    docker-compose down $@
   cd "${projectRoot}"
   cd ./ffc-pay-submission && \
-    docker-compose down
+    docker-compose down $@
   cd "${projectRoot}"
   cd ./ffc-pay-responses && \
-    docker-compose down
+    docker-compose down $@
   cd "${projectRoot}"
   cd ./ffc-pay-web && \
-    docker-compose down
+    docker-compose down $@
 fi
 
 if [ "${gateway}" = "true" ]; then
   cd "${projectRoot}"
   cd ./ffc-sfi-api-gateway && \
-    docker-compose down
+    docker-compose down $@
 fi
